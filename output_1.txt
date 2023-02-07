@@ -1,38 +1,76 @@
 Lambert-Eaton myasthenic syndrome (LEMS) is a rare autoimmune disorder characterized by ﬂuctuating muscle weakness, loss of tendon reﬂexes, and autonomic dysfunction.
+ランバート・イートン筋無力症症候群 (LEMS) は、変動する筋力低下、腱反射の喪失、および自律神経機能障害を特徴とするまれな自己免疫疾患です。
 1,2 Muscle weakness usually starts in the proximal leg muscles,1,3 which can severely limit mobility.
+1,2 筋力低下は通常、脚の近位筋から始まり、1,3 可動性が著しく制限される可能性があります。
 Symptoms usually progress over the ﬁrst months and can often be controlled by symptomatic and immunosuppressive treatment.
+症状は通常、最初の数か月で進行し、対症療法および免疫抑制療法によって制御できることがよくあります。
 4–6 After diagnosis, symptoms can vary between long-lasting remission on treatment, frequent ﬂuctuations, and permanent disability.
+4–6 診断後の症状は、治療による長期にわたる寛解、頻繁な変動、恒久的な身体障害の間で変化する可能性があります。
 Distributions of symptoms and signs have been reported in several studies.
+症状と徴候の分布は、いくつかの研究で報告されています。
 1,3,7–9 Long-term follow-up of muscle strength scores, EMG, and voltage-gated calcium channel (VGCC) antibody results has been reported in 47 patients.
+1,3,7–9 筋力スコア、EMG、および電位依存性カルシウム チャネル (VGCC) 抗体の結果の長期追跡調査が 47 人の患者で報告されています。
 10 FunctionalimpairmentsofpatientswithLEMSover the disease course have been described in 12 patients only.
+LEMS 患者の機能障害は、12 人の患者のみで報告されています。
 11 Associated tumors are found in 50% to 60% of patients with LEMS, almost invariably small cell lung cancer (SCLC).
+11 関連する腫瘍は、LEMS 患者の 50% から 60% に見られ、ほぼ常に小細胞肺癌 (SCLC) です。
 1,3,7,12 Limited data suggest some improvement of symptoms in patients with LEMS with SCLC (SCLCLEMS)aftertreatmentofthetumor.
+1、3、7、12 限られたデータでは、腫瘍の治療後に SCLC を伴う LEMS (SCLCLEMS) 患者の症状がいくらか改善することが示唆されています。
 13 Previousstudieshave shown a profound improved tumor survival in SCLCLEMS,14–18 but no data exist on the quality of life of this period of improved survival.
+13 以前の研究では、SCLCLEMS の腫瘍生存率が大幅に改善されたことが示されていますが、14–18 生存率が改善されたこの期間の生活の質に関するデータは存在しません。
 Hardly any data are available determining survival and quality of life of patients with LEMS without associated tumors.
+腫瘍を伴わない LEMS 患者の生存と生活の質を決定するデータはほとんどありません。
 1 In this observational study, we aimed to characterize functional impairments over the disease course and the quality of life of patients with LEMS.
+1 この観察研究では、LEMS 患者の疾患経過と QOL における機能障害の特徴を明らかにすることを目的としました。
 We studied survival of all patients with LEMS with and without associated tumors.
+関連する腫瘍の有無にかかわらず、すべての LEMS 患者の生存率を調査しました。
 Methods Patient population From July 1, 1998, to October 1, 2015, data from all consecutive Dutch patients with LEMS were collected prospectively, as described before.
+方法 患者集団 1998 年 7 月 1 日から 2015 年 10 月 1 日まで、前に説明したように、LEMS を有するすべての連続したオランダ人患者からのデータが前向きに収集されました。
 3,19 Leiden University Medical Center has a tertiary neuromuscular outpatient clinic and is the nationwide referral center for LEMS in the Netherlands.
+3,19 ライデン大学医療センターには三次神経筋外来診療所があり、オランダにおける LEMS の全国的な紹介センターです。
 Patients were also identiﬁed through diagnosis registration databases and neuromuscular databases in university centers upto2003.
+患者は、2003 年まで大学センターの診断登録データベースと神経筋データベースからも特定されました。
 Afterward,weapproachedtreatingneurologistsof all Dutch patients with positive results for VGCC antibodies (assay performed in Leiden and Rotterdam for all Dutch hospitals).
+その後、すべてのオランダ人患者の神経科医の治療に取り組み、VGCC 抗体の陽性結果が得られました (オランダのすべての病院についてライデンとロッテルダムで実施されたアッセイ)。
 This resulted in a small number of patients added retrospectivelyafterapositiveVGCCassayandveriﬁcationof diagnosis (n = 7).
+その結果、少数の患者が VGCC 検査で陽性となり、診断が確認された後にレトロスペクティブに追加されました (n = 7)。
 One patient with LEMS who lacked most required data was excluded from this study.
+最も必要なデータが不足しているLEMS患者1人は、この研究から除外されました。
 The diagnosis of LEMS was based on characteristic clinical features, supported by either the presence of antibodies to VGCC or abnormal decrement and 60% increment on repetitivenervestimulation.
+LEMS の診断は、特徴的な臨床的特徴に基づいており、VGCC に対する抗体の存在または異常な減少と反復神経刺激の 60% 増加のいずれかによって裏付けられました。
 2,20Incrementtestingwasperformed immediately after 10 to 30 seconds of voluntary contraction.
+2,20 増分テストは、10 ～ 30 秒の随意収縮の直後に実行されました。
 Survival In the survival analysis, we separated the patients with LEMS withandwithoutassociatedSCLC,excludingnon-SCLCfrom the analysis (n = 3), as well as 1 patient with SCLC without a knowndateof tumor diagnosis.
+生存 生存分析では、分析から非 SCLC を除外して、関連 SCLC を伴うものと伴わない LEMS 患者 (n = 3)、および腫瘍診断の日付が不明な SCLC 患者 1 人を分離しました。
 PatientswithLEMSwithout associated tumor were compared to the general Dutch population as published by the Central Statistics oﬃce of the Netherlands,matchingpatientswithLEMSforageand yearat LEMS diagnosis and sex21 (Statline.
+腫瘍を伴わない LEMS の患者は、オランダの中央統計局によって公表されたオランダの一般集団と比較され、LEMS の診断と性別で LEMS の年齢と年が一致しました 21 (Statline.
 cbs.
+cbs。
 nl22).
+会う）。
 Survival from diagnosis of tumors in patients with LEMS with associated SCLC was compared to survival in all patients with SCLC in the Netherlands from 1998 to 2012, as registered in the Netherlands Cancer Registry Netherlands Cancer Registry operated by Netherlands Comprehensive Cancer Organisation.
+1998 年から 2012 年までオランダの SCLC に関連する SCLC を伴う LEMS 患者の腫瘍診断からの生存率を、Netherlands Comprehensive Cancer Organisation が運営する Netherlands Cancer Registry Netherlands Cancer Registry に登録されている全 SCLC 患者の生存率と比較しました。
 23 As a secondary outcome measure, both patients with SCLC-LEMS and controls with SCLC were compared post hoc according to tumor stage (limited or extensive disease).
+23 副次評価項目として、SCLC-LEMS の患者と SCLC の対照者の両方を、腫瘍の病期 (限定的または広範な疾患) に従って事後比較しました。
 Among patients with SCLC-LEMS, patients with and those without bulbar involvement or loss of weight within 3 months from onset were compared to show whether these variables predictedsurvival.
+SCLC-LEMS 患者のうち、発症から 3 か月以内に球病変または体重減少がある患者とない患者を比較して、これらの変数が生存を予測するかどうかを示しました。
 Survivalofthesepatientswasalsocalculated according to patients’ Dutch-English LEMS Tumour Association Prediction (DELTA-P) scores.
+これらの患者の生存率も、患者のオランダ語-英語 LEMS 腫瘍関連予測 (DELTA-P) スコアに従って計算されました。
 24 In patients with followup data, medical events leading up to death were studied to determine their potential relation with LEMS.
+24 フォローアップデータのある患者では、死に至るまでの医療イベントが研究され、LEMS との潜在的な関係が判断されました。
 Functional impairments Disease course in patients with LEMS was recorded retrospectively with a semistructured interview in all available patients alive in 2014 to 2015 in combination with medical records.
+機能障害 LEMS 患者の疾患経過は、医療記録と組み合わせて、2014 年から 2015 年に生存している利用可能なすべての患者の半構造化インタビューで遡及的に記録されました。
 We used the modiﬁed Rankin Scale (mRS) and Karnofsky Performance Scale (KPS) to grade functional impairment.
+修正されたランキン スケール (mRS) とカルノフスキー パフォーマンス スケール (KPS) を使用して、機能障害を等級付けしました。
 For the mRS, a structured interview was performed.
+mRS については、構造化面接を行った。
 25,26 For a limited number of patients (10 of 63), mRS and KPS scores were collected solely from medical records.
+25,26 限られた数の患者 (63 人中 10 人) について、mRS および KPS スコアは医療記録のみから収集されました。
 In allof thesepatients, extensive follow-updata were available to derive functional limitations.
+これらの患者のすべてにおいて、機能的な制限を導き出すための広範な追跡データが利用可能でした。
 Lambert-Eaton myasthenic syndrome (LEMS) is a rare autoimmune disorder characterized by ﬂuctuating muscle weakness, loss of tendon reﬂexes, and autonomic dysfunction.
+ランバート・イートン筋無力症症候群 (LEMS) は、変動する筋力低下、腱反射の喪失、および自律神経機能障害を特徴とするまれな自己免疫疾患です。
 1,2 Muscle weakness usually starts in the proximal leg muscles,1,3 which can severely limit mobility.
+1,2 筋力低下は通常、脚の近位筋から始まり、1,3 可動性が著しく制限される可能性があります。
 Symptoms usually progress over the ﬁrst months and can often be controlled by symptomatic and immunosuppressive treatment.
+症状は通常、最初の数か月で進行し、対症療法および免疫抑制療法によって制御できることがよくあります。

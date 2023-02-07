@@ -1,5 +1,6 @@
 import copy
 import configparser
+from googletrans import Translator
 
 config_ini = configparser.ConfigParser()
 config_ini.read('config.ini', encoding='utf-8-sig')
@@ -16,7 +17,7 @@ def main():
     text_file_list = []
     str_num = 0
     f_num = 0
-
+    print("テキストファイルの改行修正中・・・")
     # テキストファイル内の文字列の読み込み
     with open(file_path, encoding="utf-8") as f:
         l_strip = [s.strip() for s in f.readlines()]
@@ -64,20 +65,27 @@ def main():
             new_list.clear()
         str_num = 0
 
+    print("修正したテキストを翻訳中・・・")
+    translator = Translator()
     # str_thresh文字以上超えた出力
     if len(text_file_list) > 0:
         for t_file in text_file_list:
             f_num += 1
             with open('output_{}.txt'.format(f_num), mode='w', encoding="utf-8") as f:
                 for t_1 in t_file:
-                    print(t_1, file=f)          
+                    translated = translator.translate(t_1, dest="ja")
+                    print(t_1, file=f)
+                    print(translated.text, file=f)  # 翻訳後の文章
 
     # str_thresh文字以内の出力
     f_num += 1
     with open('output_{}.txt'.format(f_num), mode='w', encoding="utf-8") as f:
         for t_2 in new_list:
+            translated = translator.translate(t_2, dest="ja")
             print(t_2, file=f)
+            print(translated.text, file=f)  # 翻訳後の文章
 
 
 if __name__ == '__main__':
     main()
+    print("翻訳が完了しました。")
