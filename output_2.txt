@@ -1,42 +1,84 @@
+(2019); Belkinet al.
 (2019);アクセントアル。
+(2018); d’Ascoli et al.
 (2018);アスコリらによる。
+(2020).
 （２０２０）。
+On the small algorithmic datasets that we study, improvedgeneralization after initial overﬁtting occurs for a range of models, optimizers, and dataset sizes,and in some cases these effects are extremely pronounced.
 私たちが研究している小さなアルゴリズム データセットでは、さまざまなモデル、オプティマイザー、およびデータセット サイズで最初のオーバーフィッティングが発生した後の一般化が改善され、場合によってはこれらの効果が非常に顕著です。
+A typical example is shown for modulardivision in Figure 1.
 モジュール分割の典型的な例を図 1 に示します。
+There we see that validation accuracy starts increasing beyond chance levelonly after 1000 times more optimization steps than are required for training accuracy to get close tooptimal.
 ここでは、トレーニングの精度が最適に近づくために必要な最適化ステップの 1000 倍の回数を超えて初めて、検証の精度が偶然のレベルを超えて増加し始めることがわかります。
+In Figure 4 the training/validation losses are also plotted and we see the double descent ofthe validation loss.
 図 4 では、トレーニング/検証の損失もプロットされており、検証の損失の二重降下が見られます。
+We found these behaviors to be typical for all the binary operations for dataset sizes that were closeto the minimal dataset size for which the network generalized within the allotted optimization budget.
 これらの動作は、ネットワークが割り当てられた最適化バジェット内で一般化された最小データセット サイズに近いデータセット サイズのすべてのバイナリ操作で典型的であることがわかりました。
+For larger dataset sizes, the training and validation curves tend to track each other more closely.
 データセットのサイズが大きいほど、トレーニング曲線と検証曲線は互いにより密接に追跡する傾向があります。
+3.
 ３。
+1.
 １。
+1 LEARNING TIME CURVESIn a typical supervised learning problem, decreasing the amount of training data decreases theconverged generalization performance of the model when the optimization procedure is capable ofinterpolating the training data.
 1 学習時間曲線典型的な教師あり学習問題では、最適化手順がトレーニング データを補間できる場合、トレーニング データの量を減らすと、モデルの収束した一般化のパフォーマンスが低下します。
+In our setting, we observe a different phenomenon: while the convergedperformance stays constant at 100% within a range of training dataset sizes, the optimization timerequired to achieve that performance grows quicky as the dataset size is decreased.
 私たちの設定では、別の現象が観察されます。トレーニング データセットのサイズの範囲内で、収束したパフォーマンスは 100% で一定の​​ままですが、そのパフォーマンスを達成するために必要な最適化時間は、データセットのサイズが減少するにつれて急速に増加します。
+2Figure 2: Left.
 2図 2: 左。
+Different optimization algorithms lead to different amounts of generalization withinan optimization budget of 105 steps for the problem of learning the product in the abstract group S5.
 異なる最適化アルゴリズムは、抽象グループ S5 の積を学習する問題の 105 ステップの最適化バジェット内で異なる量の一般化につながります。
+Weight decay improves generalization the most, but some generalization happens even with full batchoptimizers and models without weight or activation noise at high percentages of training data.
 重みの減衰は一般化を最も改善しますが、完全なバッチオプティマイザーとトレーニング データの高いパーセンテージでの重みまたはアクティベーション ノイズのないモデルであっても、ある程度の一般化が行われます。
+Subop-timal choice hyperparameters severely limit generalization.
 サブ最適選択ハイパーパラメーターは、一般化を大幅に制限します。
+Not shown: training accuracy reaches100% after 103-104 updates for all optimization methods.
 表示されていません: すべての最適化方法で 103 ～ 104 回の更新後、トレーニングの精度は 100% に達します。
+Right.
 右。
+Best validation accuracy achievedafter 105 steps on a variety of algorithmic datasets, averaged over 3 seeds.
 さまざまなアルゴリズム データセットで 105 ステップ後に達成された最高の検証精度 (3 シードの平均)。
+Generalization happens athigher percentages of data for intuitively more complicated and less symmetrical operations.
 一般化は、直感的により複雑で対称性の低い操作のために、データのより高い割合で発生します。
+Figure 1 (center) shows median number of optimization steps until validation performance ﬁrstreaches 99% for the product in abstract group S5.
 図 1 (中央) は、抽象グループ S5 の製品の検証パフォーマンスが最初に 99% に達するまでの最適化ステップ数の中央値を示しています。
+In the vicinity of 25-30% of data, a decrease of 1%of training data leads to an increase of 40-50% in median time to generalization.
 データの 25 ～ 30% 付近では、トレーニング データが 1% 減少すると、一般化までの時間の中央値が 40 ～ 50% 増加します。
+While the numberof steps until validation accuracy > 99% grows quickly as dataset size decreases, the number of stepsuntil the train accuracy ﬁrst reaches 99% generally trends down as dataset size decreases and stays inthe range of 103-104 optimization steps.
 検証精度が 99% を超えるまでのステップ数は、データセットのサイズが減少するにつれて急速に増加しますが、トレーニングの精度が最初に 99% に達するまでのステップ数は、データセットのサイズが減少し、103 ～ 104 の最適化ステップの範囲内に留まるにつれて、一般的に減少傾向にあります。
+We’ve observed a similar pattern of exponential increase inoptimization time until reaching generalization as dataset size decreases on all the algorithmic tasksfor which we could get the networks to generalize.
 ネットワークを一般化できるすべてのアルゴリズムタスクでデータセットのサイズが減少するにつれて、一般化に達するまでの最適化時間が指数関数的に増加するという同様のパターンが観察されました。
+3.
 ３。
+2 GROKKING ON A VARIETY OF PROBLEMSWe’ve measured the mean accuracy across three runs for training datasets consisting of differentfractions of all available equations for a variety of binary operations listed in Appendix A.
 2 さまざまな問題を理解する 付録 A に記載されているさまざまな 2 項演算で利用可能なすべての方程式のさまざまな部分で構成されるトレーニング データセットについて、3 回の実行で平均精度を測定しました。
+1.
 １。
+1.
 １。
+Theresults are presented in Figure 2 (right).
 結果を図 2 (右) に示します。
+Since the operands are presented to the neural network as unrelated abstract symbols, the operationsx + y (mod p − 1) and x ∗ y (mod p) with a prime number p and non-zero x, y are indistinguishablefrom the neural network’s perspective (and similarly x − y (mod p − 1) and x/y (mod p)).
 オペランドは無関係な抽象記号としてニューラル ネットワークに提示されるため、素数 p とゼロ以外の x、y を持つ操作 x + y (mod p − 1) と x ∗ y (mod p) は、ニューラル ネットワークの観点からは区別できません。 (および同様に x − y (mod p − 1) および x/y (mod p))。
+Thisis because every nonzero residue modulo a prime can be represented as a power of a primitive root.
 これは、素数を法とするすべての非ゼロ剰余は、原始根の累乗として表すことができるためです。
+This representation shows the equivalence (up to renaming of symbols) of modular addition modulop − 1 and modular multiplication modulo p.
 この表現は剰余加算 modulop − 1 と剰余乗算 modulo p の同等性 (記号の名前変更まで) を示しています。
+We see in Figure 2 (right) that x − y and x/y indeedtake about the same amount of data for generalization to occur.
 図 2 (右) を見ると、x − y と x/y が実際に一般化を行うのにほぼ同じ量のデータが必要であることがわかります。
+Some of the operations listed in Figure 2 (right) are symmetric with respect to the order of theoperands (x + y, x ∗ y, x2 + y2 and x2 + xy + y2).
 図 2 (右) にリストされている操作の一部は、オペランド (x + y、x ∗ y、x2 + y2、および x2 + xy + y2) の順序に関して対称です。
+Such operations tend to require less data forgeneralization than closely related non-symmetrical counterparts (x − y, x/y, x2 + xy + y2 + x).
 このような演算は、密接に関連する非対称演算 (x − y、x/y、x2 + xy + y2 + x) よりも一般化に必要なデータが少ない傾向があります。
+We believe this effect might be partially architecture-dependent, since it’s easy for a transformer tolearn a symmetric function of the operands by ignoring positional embedding.
 トランスフォーマーは位置埋め込みを無視することでオペランドの対称関数を簡単に学習できるため、この効果は部分的にアーキテクチャに依存する可能性があると考えています。
+Some operations (for example x3 + xy2 + y (mod 97)) didn’t lead to generalization within theallowed optimization budget at any percentage of data up to 95%.
 一部の操作 (x3 + xy2 + y (mod 97) など) は、最大 95% までのデータの割合で、許可された最適化バジェット内で一般化されませんでした。
+The converged models effectivelyjust memorized the training dataset without ﬁnding any real patterns in the data.
 収束したモデルは、データ内に実際のパターンを見つけることなく、トレーニング データセットを効果的に記憶しただけです。
+To such a model, thedata is effectively random.
 このようなモデルでは、データは事実上ランダムです。
+The operation [x/y (mod p) if y is odd, otherwise x − y (mod p)] requires the network to learn amix of several simple operations - in particular the role of x has to be interpreted as a residue in theadditive group when it’s paired with an even y, and as a residue in the multiplicative group when it’spaired with an odd y.
 [x/y (mod p) y が奇数の場合、それ以外の場合は x − y (mod p)] の操作では、ネットワークがいくつかの単純な操作の組み合わせを学習する必要があります。特に、x の役割は、加法の剰余として解釈する必要があります。偶数の y とペアになっている場合はグループになり、奇数の y とペアになっている場合は乗法群の剰余として。
+This shows that generalization can happen even for operations that are notcleanly interpretable via group or ring operations.
 これは、グループ操作またはリング操作を介して明確に解釈できない操作に対しても一般化が発生する可能性があることを示しています。

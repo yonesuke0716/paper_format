@@ -26,7 +26,7 @@ def txt_format(input_txt, str_thresh):
         # 文字数チェック
         for i in format_list:
             str_num += len(i)
-        # 文字数が閾値超えたら新しいファイルを作成
+        # 文字数が閾値超えたら新しいファイルを作成(API対策)
         if str_num > str_thresh:
             print("文字数が{}文字を超えました。ファイルを追加します。".format(str_thresh))
             text_file_list.append(copy.deepcopy(format_list))

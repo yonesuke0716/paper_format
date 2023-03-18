@@ -1,42 +1,84 @@
 2202naJ6]GL.
+2202naJ6]GL.
 sc[1v77120.
+sc[1v77120.
+1022:viXraGROKKING: GENERALIZATION BEYOND OVERFIT-TING ON SMALL ALGORITHMIC DATASETSAlethea Power, Yuri Burda, Harri Edwards, Igor BabuschkinOpenAIVedant Misra∗GoogleABSTRACTIn this paper we propose to study generalization of neural networks on small al-gorithmically generated datasets.
 1022:viXraGROCKING: 小さなアルゴリズム データセットでの過適合を超えた一般化Lethea Power、Yuri Burda、Harri Edwards、Igor BabuschkinOpenAIVedant Misra*GoogleABSTRACTこの論文では、小さなアルゴリズムで生成されたデータセットでニューラル ネットワークの一般化を研究することを提案します。
+In this setting, questions about data efﬁciency,memorization, generalization, and speed of learning can be studied in great de-tail.
 この設定では、データ効率、記憶、一般化、および学習速度に関する質問を非常に詳細に研究できます。
+In some situations we show that neural networks learn through a processof “grokking” a pattern in the data, improving generalization performance fromrandom chance level to perfect generalization, and that this improvement in general-ization can happen well past the point of overﬁtting.
 状況によっては、ニューラル ネットワークがデータ内のパターンを「理解」するプロセスを通じて学習し、一般化のパフォーマンスがランダム チャンス レベルから完全な一般化まで改善されること、および一般化のこの改善はオーバーフィッティングのポイントをはるかに超えて発生する可能性があることを示します。
+We also study generalization asa function of dataset size and ﬁnd that smaller datasets require increasing amountsof optimization for generalization.
 また、データセットのサイズの関数として一般化を研究し、データセットが小さいほど、一般化のために最適化の量を増やす必要があることを発見しました。
+We argue that these datasets provide a fertileground for studying a poorly understood aspect of deep learning: generalizationof overparametrized neural networks beyond memorization of the ﬁnite trainingdataset.
 これらのデータセットは、深層学習のあまり理解されていない側面を研究するための肥沃な土壌を提供すると主張します。つまり、有限のトレーニングデータセットの記憶を超えた、過剰にパラメーター化されたニューラルネットワークの一般化です。
+1INTRODUCTIONThe generalization of overparameterized neural networks has long been a source of interest to themachine learning community since it deﬁes intuitions derived from classical learning theory.
 1はじめに過剰にパラメータ化されたニューラル ネットワークの一般化は、古典的な学習理論から導き出された直感を否定するものであるため、長い間機械学習コミュニティの関心の的でした。
+Inthis paper we show that training networks on small algorithmically generated datasets can reliablyexhibit unusual generalization patterns, clearly decoupled from performance on the training set, in asigniﬁcantly more pronounced way than such effects manifest on datasets derived from natural data(see Figure 1, left, for an example).
 この論文では、アルゴリズムによって生成された小規模なデータセットに対するトレーニング ネットワークが、異常な一般化パターンを確実に示すことができることを示します。これは、トレーニング セットのパフォーマンスから明確に切り離されており、自然データから派生したデータセットに現れるそのような効果よりもはるかに顕著です (図 1 の左を参照)。例）。
+Such experiments can be quickly reproduced on a single GPU,and this makes them convenient testbeds for theories of generalization.
 このような実験は、単一の GPU ですばやく再現できるため、一般化の理論のテストベッドとして便利です。
+Figure 1: Left.
 図 1: 左。
+Grokking: A dramatic example of generalization far after overﬁtting on an algorithmicdataset.
 Grokking: アルゴリズムのデータセットで過剰適合した後の一般化の劇的な例。
+We train on the binary operation of division mod 97 with 50% of the data in the training set.
 トレーニング セットのデータの 50% を使用して、97 を法とする除算のバイナリ演算をトレーニングします。
+Each of the 97 residues is presented to the network as a separate symbol, similar to the representationin the ﬁgure to the right.
 97 個の残基のそれぞれは、右の図の表現と同様に、個別のシンボルとしてネットワークに提示されます。
+The red curves show training accuracy and the green ones show validationaccuracy.
 赤い曲線はトレーニングの精度を示し、緑の曲線は検証の精度を示しています。
+Training accuracy becomes close to perfect at < 103 optimization steps, but it takesclose to 106 steps for validation accuracy to reach that level, and we see very little evidence of anygeneralization until 105 steps.
 トレーニングの精度は 103 未満の最適化ステップで完璧に近づきますが、検証の精度がそのレベルに到達するには 106 ステップ近くかかり、105 ステップまで一般化の証拠はほとんど見られません。
+Center.
 中心。
+Training time required to reach 99% validation accuracyincreases rapidly as the training data fraction decreases.
 99% の検証精度に到達するために必要なトレーニング時間は、トレーニング データの割合が減少するにつれて急速に増加します。
+Right.
 右。
+An example of a small binaryoperation table.
 小さなバイナリ操作テーブルの例。
+We invite the reader to make their guesses as to which elements are missing.
 どの要素が欠落しているかについて読者に推測してもらいます。
+∗Vedant was at OpenAI at the time of this work1      The datasets we consider are binary operation tables of the form a ◦ b = c where a, b, c are discretesymbols with no internal structure, and ◦ is a binary operation.
 ∗Vedant はこの作業の時点で OpenAI にいました1 私たちが検討するデータセットは、a ◦ b = c の形式の 2 項演算テーブルです。ここで、a、b、c は内部構造を持たない離散記号であり、◦ は 2 項演算です。
+Examples of binary operations includeaddition, composition of permutations, and bivariate polynomials.
 二項演算の例としては、加算、順列合成、二変数多項式などがあります。
+Training a neural network on aproper subset of all possible equations then amounts to ﬁlling in the blanks of the binary op table,much like solving a Sudoku puzzle.
 考えられるすべての方程式の適切なサブセットでニューラル ネットワークをトレーニングすることは、数独パズルを解くのと同じように、2 項演算テーブルの空白を埋めることになります。
+An example is shown on the right in Figure 1.
 例を図 1 の右側に示します。
+Since we usedistinct abstract symbols for all distinct elements a, b, c involved in the equations, the network is notmade aware of any internal structure of the elements, and has to learn about their properties onlyfrom their interactions with other elements.
 方程式に含まれるすべての個別の要素 a、b、c に個別の抽象記号を使用したため、ネットワークは要素の内部構造を認識せず、他の要素との相互作用からのみそれらのプロパティを学習する必要があります。
+For example the network doesn’t see numbers in decimalnotation, or permutations in line notation.
 たとえば、ネットワークは 10 進表記の数字や行表記の順列を認識しません。
+Our contributions are as follows:• We show that neural networks are capable of generalizing to the empty slots in a variety ofbinary op tables.
 私たちの貢献は次のとおりです。 • ニューラル ネットワークが、さまざまなバイナリ op テーブルの空のスロットに一般化できることを示します。
+• We show that, long after severely overﬁtting, validation accuracy sometimes suddenlybegins to increase from chance level toward perfect generalization.
 • 深刻なオーバーフィッティングの後、検証精度が偶然のレベルから完全な一般化に向かって突然増加し始めることがあることを示します。
+We call this phenomenon‘grokking’.
 この現象を「グロッキング」と呼んでいます。
+An example is shown in Figure 1.
 例を図 1 に示します。
+• We present the data efﬁciency curves for a variety of binary operations.
 • さまざまなバイナリ操作のデータ効率曲線を提示します。
+• We show empirically that the amount of optimization required for generalization quicklyincreases as the dataset size decreases.
 • データセットのサイズが小さくなると、一般化に必要な最適化の量が急速に増加することが経験的に示されています。
+• We compare various optimization details to measure their impact on data efﬁciency.
 • さまざまな最適化の詳細を比較して、データ効率への影響を測定します。
+We ﬁndthat weight decay is particularly effective at improving generalization on the tasks we study.
 減量は、研究するタスクの一般化を改善するのに特に効果的であることがわかりました。
+• We visualize the symbol embeddings learned by these networks and ﬁnd that they sometimesuncover recognizable structure of the mathematical objects represented by the symbols.
 • これらのネットワークによって学習されたシンボルの埋め込みを視覚化すると、シンボルによって表される数学的オブジェクトの認識可能な構造が時々明らかになることがわかります。
+2 METHODAll of our experiments used a small transformer trained on datasets of equations of the form a ◦ b = c,where each of “a”, “◦”, “b”, “=”, and “c” is a separate token.
 2 方法私たちのすべての実験では、a ◦ b = c の形式の方程式のデータセットでトレーニングされた小さな変換器を使用しました。ここで、「a」、「◦」、「b」、「=」、および「c」はそれぞれ別のトークンです。 .
+Details of the operations studied, thearchitecture, training hyperparameters and tokenization can be found in Appendix A.
 調査した操作、アーキテクチャ、トレーニング ハイパーパラメータ、およびトークン化の詳細については、付録 A を参照してください。
+1.
 １。
+3 EXPERIMENTS3.
 3 実験3.
+1 GENERALIZATION BEYOND OVERFITTINGDeep learning practitioners are used to seeing small improvements in validation accuracy aftervalidation loss stops decreasing.
 1 オーバーフィッティングを超えた一般化深層学習の実践者は、検証損失が減少しなくなった後、検証精度がわずかに向上することに慣れています。
+A double descent of validation loss has been documented insome circumstances, but is considered unusual among practitioners Nakkiran et al.
 検証損失の二重降下がいくつかの状況で文書化されていますが、実務家の間では珍しいと考えられています。
