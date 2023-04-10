@@ -3,7 +3,15 @@
 論文翻訳補助ツールです。
 
 実行方法：
+【通常】
+
 python main.py
+
+【Docker】
+
+docker build -t paper_format .
+
+docker run -v $(pwd):/app -it paper_format
 
 詳細は以下の記事を参照ください。
 https://yonesuke0716.hatenablog.com/entry/2023/01/23/100836
